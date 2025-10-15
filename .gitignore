@@ -1,0 +1,15 @@
+# Node
+node_modules/
+
+# Build outputs
+frontend/dist/
+backend/dist/
+
+# Logs
+*.log
+
+# Environment files (keep secrets out of git)
+.env
+*/.env
+backend/.env
+frontend/.env
