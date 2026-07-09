@@ -848,24 +848,124 @@
 
   .options-grid {
     grid-template-columns: 1fr;
+    gap: 0.6rem !important;
+  }
+
+  .option-card {
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    min-height: auto !important;
+    padding: 0.75rem 1rem !important;
+    gap: 0.75rem !important;
+  }
+
+  .option-card i:first-child {
+    font-size: 1.35rem !important;
+    margin-bottom: 0 !important;
+    transition: none !important;
+  }
+
+  .option-card .option-label {
+    font-size: 0.9rem !important;
+    margin: 0 !important;
+    text-align: left !important;
+  }
+
+  .option-card .check-icon {
+    top: 50% !important;
+    transform: translateY(-50%) !important;
+    right: 1rem !important;
   }
 
   .option-item {
-    padding: 1.25rem;
+    padding: 0.75rem 1rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  .recommendation-card {
+    padding: 1.25rem 1rem !important;
+    border-radius: 16px !important;
   }
 
   .recommendation-rank {
-    width: 2.5rem;
-    height: 2.5rem;
-    font-size: var(--text-base);
+    width: 2rem !important;
+    height: 2rem !important;
+    font-size: 0.9rem !important;
+    top: 1rem !important;
+    right: 1rem !important;
   }
 
   .recommendation-header {
     flex-direction: column;
+    margin-bottom: 1rem !important;
+    gap: 0.5rem !important;
+  }
+
+  .recommendation-title {
+    font-size: 1.25rem !important;
+    font-weight: 700 !important;
+    max-width: calc(100% - 2.5rem) !important;
   }
 
   .recommendation-score {
     align-self: flex-start;
+    padding: 0.4rem 0.75rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+
+  .score-value {
+    font-size: 1.25rem !important;
+  }
+
+  .score-label {
+    font-size: 0.65rem !important;
+    letter-spacing: 0.5px !important;
+  }
+
+  .recommendation-description {
+    font-size: 0.82rem !important;
+    line-height: 1.4 !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .recommendation-details {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    padding: 0.4rem !important;
+    gap: 0.4rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .detail-item {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 0.5rem 0.25rem !important;
+    background: white !important;
+    border: 1px solid var(--border-light) !important;
+    border-radius: 8px !important;
+    gap: 0.25rem !important;
+    font-size: 0.68rem !important;
+    min-height: 65px !important;
+  }
+
+  .detail-item i {
+    font-size: 1rem !important;
+    width: auto !important;
+    margin-bottom: 0 !important;
+    text-align: center !important;
+  }
+
+  .skills-section {
+    margin-top: 1rem !important;
+    padding-top: 1rem !important;
+  }
+
+  .skills-section h4 {
+    font-size: 0.85rem !important;
+    margin-bottom: 0.5rem !important;
   }
 
   .skills-tags {
@@ -873,8 +973,8 @@
   }
 
   .skill-tag {
-    padding: 0.4rem 0.8rem;
-    font-size: 0.8rem;
+    padding: 0.3rem 0.6rem !important;
+    font-size: 0.75rem !important;
   }
 
   .mobile-menu-toggle {

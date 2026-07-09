@@ -844,7 +844,7 @@ const Universities = () => {
               <section className="details-section">
                 <h3><i className="fas fa-info-circle"></i> Basic Information</h3>
                 <div className="details-grid">
-                  <div className="detail-item">
+                  <div className="detail-item full-width">
                     <strong>Location:</strong>
                     <span>{viewDetailsUniversity.location.city}, {viewDetailsUniversity.location.state}, {viewDetailsUniversity.location.country}</span>
                   </div>

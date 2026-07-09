@@ -7,9 +7,10 @@ export function Button({ children, variant = 'primary', className = '', ...props
   )
 }
 
-export function SectionTitle({ title, subtitle, icon }) {
+export function SectionTitle({ title, subtitle, icon, overline }) {
   return (
     <div className="section-title">
+      {overline && <div className="overline">{overline}</div>}
       <div className="title-wrap">
         {icon && <i className={icon}></i>}
         <h2>{title}</h2>
@@ -27,8 +28,12 @@ export function FeatureCard({ icon, title, desc, hover = false, image }) {
           <img src={image} alt={title} />
         </div>
       )}
-      {icon && <div className="icon" aria-hidden>{icon}</div>}
-      <div className="card-title">{title}</div>
+      {(icon || title) && (
+        <div className="feature-card-header">
+          {icon && <div className="icon" aria-hidden>{icon}</div>}
+          {title && <div className="card-title">{title}</div>}
+        </div>
+      )}
       <p className="muted">{desc}</p>
     </div>
   )

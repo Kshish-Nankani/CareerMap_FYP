@@ -584,31 +584,40 @@ p {
   }
   
   .nav-actions .btn {
-    padding: 5px 10px !important;
-    font-size: 12px !important;
-    border-radius: 6px !important;
+    padding: 8px 16px !important;
+    font-size: 13.5px !important;
+    border-radius: 20px !important;
     white-space: nowrap !important;
   }
 
   .card {
-    padding: 1rem !important;
+    padding: 0.75rem !important;
   }
 
   .feature-image {
-    height: 120px !important;
-    margin: -1rem -1rem 0.75rem -1rem !important;
+    height: 100px !important;
+    margin: -0.75rem -0.75rem 0.6rem -0.75rem !important;
     border-radius: var(--radius-lg) var(--radius-lg) 0 0 !important;
   }
 
+  .feature-card-header {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 8px !important;
+    margin-bottom: 8px !important;
+  }
+
   .feature-card .icon {
-    font-size: 20px !important;
-    margin-bottom: 10px !important;
-    margin-top: 0.25rem !important;
+    font-size: 16px !important;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+    flex-shrink: 0 !important;
   }
 
   .card-title {
-    font-size: 1.05rem !important;
-    margin-bottom: 6px !important;
+    font-size: 0.95rem !important;
+    margin-bottom: 0 !important;
   }
 
   .muted {
@@ -823,8 +832,11 @@ p {
 
 .feature-card .icon { 
   font-size: 32px; 
-  margin-bottom: 16px;
-  display: block;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--brand);
 }
 
 .feature-image {
@@ -847,9 +859,17 @@ p {
   transform: scale(1.05);
 }
 
+.feature-card-header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
 .card-title { 
   font-weight: 700; 
-  margin: 0 0 12px; 
+  margin: 0; 
   font-size: 18px;
   color: var(--text);
 }
@@ -1053,9 +1073,36 @@ p {
   .hero-subtitle { font-size: 18px; }
   .hero-ctas { flex-direction: column; }
   .hero-stats { flex-direction: column; gap: 16px; }
-  .grid-3 { grid-template-columns: 1fr; }
+  .grid-3 { 
+    grid-template-columns: 1fr; 
+    gap: 16px !important;
+  }
   .footer-bottom { flex-direction: column; gap: 20px; }
   .process-steps { grid-template-columns: 1fr; }
+
+  /* Heading & Section spacing overrides for mobile */
+  .section-title {
+    margin-bottom: 24px !important;
+  }
+  .section-title h2 {
+    font-size: 22px !important;
+  }
+  .section-title .overline {
+    font-size: 11px !important;
+    margin-bottom: 6px !important;
+  }
+  .process-section {
+    padding: 30px 0 !important;
+  }
+  .features {
+    padding: 30px 0 !important;
+  }
+  .what-we-do {
+    padding: 30px 0 !important;
+  }
+  .testimonials {
+    padding: 30px 0 !important;
+  }
 }
 
 /* Global Premium Logo & Branding Alignment styles */

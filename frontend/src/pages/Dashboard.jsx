@@ -392,12 +392,14 @@ const Dashboard = () => {
               {journeySteps.map((step, index) => (
                 <div key={index} className="journey-card">
                   <div className="journey-card-header">
-                    <div className="journey-card-icon-wrapper">
-                      <i className={step.icon}></i>
+                    <div className="journey-card-title-group">
+                      <div className="journey-card-icon-wrapper">
+                        <i className={step.icon}></i>
+                      </div>
+                      <h3 className="journey-card-title">{step.title}</h3>
                     </div>
                     <div className="journey-card-number">{step.step}</div>
                   </div>
-                  <h3 className="journey-card-title">{step.title}</h3>
                   <p className="journey-card-description">{step.description}</p>
                 </div>
               ))}
@@ -418,10 +420,12 @@ const Dashboard = () => {
                   to={feature.link} 
                   className="feature-card"
                 >
-                  <div className={`feature-card-icon ${feature.color}`}>
-                    <i className={feature.icon}></i>
+                  <div className="feature-card-header">
+                    <div className={`feature-card-icon ${feature.color}`}>
+                      <i className={feature.icon}></i>
+                    </div>
+                    <h3 className="feature-card-title">{feature.title}</h3>
                   </div>
-                  <h3 className="feature-card-title">{feature.title}</h3>
                   <p className="feature-card-description">{feature.description}</p>
                   <div className="feature-card-arrow">
                     <i className="fas fa-arrow-right"></i>
@@ -451,8 +455,10 @@ const Dashboard = () => {
               <div className="careers-grid">
                 {[1, 2, 3].map((i) => (
                   <div key={i} className="trending-card skeleton-loader">
-                    <div className="skeleton-header"></div>
-                    <div className="skeleton-title"></div>
+                    <div className="trending-header">
+                      <div className="skeleton-header"></div>
+                      <div className="skeleton-title"></div>
+                    </div>
                     <div className="skeleton-text"></div>
                     <div className="skeleton-text"></div>
                   </div>
@@ -479,8 +485,8 @@ const Dashboard = () => {
                     )}
                     <div className="trending-header">
                       <i className={career.icon}></i>
+                      <h3 className="trending-title">{career.title}</h3>
                     </div>
-                    <h3 className="trending-title">{career.title}</h3>
                     <div className="trending-stats">
                       <div className="stat">
                         <i className="fas fa-money-bill-wave"></i>

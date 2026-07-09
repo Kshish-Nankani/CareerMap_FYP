@@ -2404,11 +2404,15 @@ function Mentorship() {
           <div className="hiw-steps">
             {/* Step 1 */}
             <div className="hiw-card">
-              <div className="hiw-icon hiw-icon-1">
-                <Search size={26} />
+              <div className="hiw-card-header">
+                <div className="hiw-icon hiw-icon-1">
+                  <Search size={26} />
+                </div>
+                <div className="hiw-card-title-group">
+                  <span className="hiw-step-num">01</span>
+                  <h3 className="hiw-step-title">Find a Tutor</h3>
+                </div>
               </div>
-              <span className="hiw-step-num">01</span>
-              <h3 className="hiw-step-title">Find a Tutor</h3>
               <p className="hiw-step-desc">
                 Browse verified peer mentors filtered by subject, university, or availability to find your perfect match.
               </p>
@@ -2420,11 +2424,15 @@ function Mentorship() {
 
             {/* Step 2 */}
             <div className="hiw-card">
-              <div className="hiw-icon hiw-icon-2">
-                <Video size={26} />
+              <div className="hiw-card-header">
+                <div className="hiw-icon hiw-icon-2">
+                  <Video size={26} />
+                </div>
+                <div className="hiw-card-title-group">
+                  <span className="hiw-step-num">02</span>
+                  <h3 className="hiw-step-title">Book a Session</h3>
+                </div>
               </div>
-              <span className="hiw-step-num">02</span>
-              <h3 className="hiw-step-title">Book a Session</h3>
               <p className="hiw-step-desc">
                 Reach out directly to your chosen tutor, agree on a time, and lock in your learning session.
               </p>
@@ -2436,11 +2444,15 @@ function Mentorship() {
 
             {/* Step 3 */}
             <div className="hiw-card">
-              <div className="hiw-icon hiw-icon-3">
-                <BadgeCheck size={26} />
+              <div className="hiw-card-header">
+                <div className="hiw-icon hiw-icon-3">
+                  <BadgeCheck size={26} />
+                </div>
+                <div className="hiw-card-title-group">
+                  <span className="hiw-step-num">03</span>
+                  <h3 className="hiw-step-title">Start Learning</h3>
+                </div>
               </div>
-              <span className="hiw-step-num">03</span>
-              <h3 className="hiw-step-title">Start Learning</h3>
               <p className="hiw-step-desc">
                 Join your session, learn from a verified peer mentor, and fast-track your academic and career goals.
               </p>

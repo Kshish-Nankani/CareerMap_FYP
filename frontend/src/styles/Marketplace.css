@@ -2281,6 +2281,21 @@
   line-height: 1.55;
 }
 
+.hiw-card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  width: 100%;
+}
+
+.hiw-card-title-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
 /* Dotted connectors between cards */
 .hiw-connector {
   display: flex;
@@ -2311,7 +2326,37 @@
     flex-direction: column;
     gap: 0;
   }
-  .hiw-card { width: 100%; }
+  
+  .hiw-card-header {
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 1.25rem !important;
+    width: 100% !important;
+  }
+
+  .hiw-card-title-group {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.15rem !important;
+  }
+
+  .hiw-card {
+    width: 100%;
+    align-items: flex-start !important;
+    text-align: left !important;
+    padding: 1.25rem !important;
+  }
+
+  .hiw-icon {
+    margin-bottom: 0 !important;
+  }
+
+  .hiw-step-desc {
+    margin-top: 0.5rem !important;
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
+  }
+
   .hiw-connector {
     flex-direction: column;
     margin: 0;

@@ -195,6 +195,10 @@
   color: var(--text-light);
 }
 
+.quick-info-item.full-width {
+  grid-column: 1 / -1;
+}
+
 .quick-info-item i {
   color: var(--text-light);
   font-size: 1rem;
@@ -684,6 +688,10 @@
   transform: translateX(4px);
 }
 
+.summary-item.full-width {
+  grid-column: 1 / -1;
+}
+
 .summary-icon {
   width: 40px;
   height: 40px;
@@ -932,6 +940,10 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+.info-item.full-width {
+  grid-column: 1 / -1;
 }
 
 .info-label {
@@ -1215,6 +1227,10 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+.academic-info-item.full-width {
+  grid-column: 1 / -1;
 }
 
 .academic-info-label {
@@ -1573,7 +1589,7 @@
   }
 
   .profile-hero-right {
-    order: -1;
+    order: 2 !important;
   }
 }
 
@@ -1687,8 +1703,8 @@
   }
 
   .info-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
   }
 
   .info-label {
@@ -1700,8 +1716,14 @@
   }
 
   .academic-info-grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 1rem !important;
+  }
+
+  .form-input {
+    padding: 0.65rem 0.75rem !important;
+    font-size: 0.9rem !important;
+    border-radius: 8px !important;
   }
 
   .tutor-applications-metrics,
@@ -1940,6 +1962,7 @@
   }
 
   .summary-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
     gap: 0.65rem !important;
   }
 
@@ -2002,13 +2025,38 @@
   }
 
   .profile-quick-info {
-    grid-template-columns: 1fr !important;
-    gap: 0.6rem;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.5rem 1.5rem !important;
+    max-width: 340px !important;
+    margin: 0 auto 1rem !important;
   }
 
   .quick-info-item {
     justify-content: center;
     font-size: 0.85rem;
+  }
+
+  .completion-card {
+    padding: 1.25rem !important;
+  }
+  
+  .completion-title {
+    margin-bottom: 0.75rem !important;
+    font-size: 1.1rem !important;
+    justify-content: center !important;
+  }
+  
+  .completion-percentage {
+    margin-bottom: 0.75rem !important;
+  }
+  
+  .percentage-value {
+    font-size: 2.25rem !important;
+  }
+  
+  .completion-message {
+    font-size: 0.85rem !important;
+    margin-bottom: 0.75rem !important;
   }
 
   .profile-hero-right {

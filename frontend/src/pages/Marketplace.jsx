@@ -480,11 +480,15 @@ function Marketplace() {
           <div className="hiw-steps">
             {/* Step 1 */}
             <div className="hiw-card">
-              <div className="hiw-icon hiw-icon-1">
-                <Crown size={26} />
+              <div className="hiw-card-header">
+                <div className="hiw-icon hiw-icon-1">
+                  <Crown size={26} />
+                </div>
+                <div className="hiw-card-title-group">
+                  <span className="hiw-step-num">01</span>
+                  <h3 className="hiw-step-title">Choose a Plan</h3>
+                </div>
               </div>
-              <span className="hiw-step-num">01</span>
-              <h3 className="hiw-step-title">Choose a Plan</h3>
               <p className="hiw-step-desc">
                 Select a premium seller plan (Basic, Standard, or Premium) that fits your inventory slot requirements.
               </p>
@@ -496,11 +500,15 @@ function Marketplace() {
 
             {/* Step 2 */}
             <div className="hiw-card">
-              <div className="hiw-icon hiw-icon-2">
-                <ShieldCheck size={26} />
+              <div className="hiw-card-header">
+                <div className="hiw-icon hiw-icon-2">
+                  <ShieldCheck size={26} />
+                </div>
+                <div className="hiw-card-title-group">
+                  <span className="hiw-step-num">02</span>
+                  <h3 className="hiw-step-title">Submit Verification</h3>
+                </div>
               </div>
-              <span className="hiw-step-num">02</span>
-              <h3 className="hiw-step-title">Submit Verification</h3>
               <p className="hiw-step-desc">
                 Fill out the secure verification form with your CNIC and a live selfie to verify your student identity.
               </p>
@@ -512,11 +520,15 @@ function Marketplace() {
 
             {/* Step 3 */}
             <div className="hiw-card">
-              <div className="hiw-icon hiw-icon-3">
-                <ShoppingBag size={26} />
+              <div className="hiw-card-header">
+                <div className="hiw-icon hiw-icon-3">
+                  <ShoppingBag size={26} />
+                </div>
+                <div className="hiw-card-title-group">
+                  <span className="hiw-step-num">03</span>
+                  <h3 className="hiw-step-title">List & Earn</h3>
+                </div>
               </div>
-              <span className="hiw-step-num">03</span>
-              <h3 className="hiw-step-title">List & Earn</h3>
               <p className="hiw-step-desc">
                 Once approved, list your academic gear, books, or notes and start trading directly with campus peers.
               </p>

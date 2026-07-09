@@ -1115,7 +1115,7 @@ export default function Profile() {
                 
                 {/*  Grid */}
                 <div className="profile-quick-info">
-                  <div className="quick-info-item">
+                  <div className="quick-info-item full-width">
                     <i className="fa-solid fa-envelope"></i>
                     <span>{profileData.email || 'No email'}</span>
                   </div>
@@ -1139,22 +1139,18 @@ export default function Profile() {
                 </div>
                 
                 <div className="profile-actions">
-                  {!isEditing ? (
-                    <>
-                      <button className="btn-primary" onClick={() => setIsEditing(true)}>
-                        <i className="fa-solid fa-pen"></i> Edit Profile
-                      </button>
-
-                    </>
-                  ) : (
-                    <>
-                      <button className="btn-primary" onClick={handleSave} disabled={loading}>
-                        <i className="fa-solid fa-save"></i> {loading ? 'Saving...' : 'Save Changes'}
-                      </button>
-                      <button className="btn-secondary" onClick={handleCancel}>
-                        <i className="fa-solid fa-times"></i> Cancel
-                      </button>
-                    </>
+                  {!isEditing && (
+                    <button 
+                      className="btn-primary" 
+                      onClick={() => {
+                        setIsEditing(true);
+                        if (activeTab === 'overview') {
+                          setActiveTab('personal');
+                        }
+                      }}
+                    >
+                      <i className="fa-solid fa-pen"></i> Edit Profile
+                    </button>
                   )}
                 </div>
               </div>
@@ -1265,7 +1261,7 @@ export default function Profile() {
                     )}
                   </div>
 
-                  <div className="info-item">
+                  <div className="info-item full-width">
                     <label className="info-label">Email</label>
                     <p className="info-value">{profileData.email}</p>
                   </div>
@@ -1369,7 +1365,7 @@ export default function Profile() {
               </div>
               <div className="card-content">
                 <div className="academic-info-grid">
-                  <div className="academic-info-item">
+                  <div className="academic-info-item full-width">
                     <label className="academic-info-label">School / University Name</label>
                     {isEditing ? (
                       <input 
@@ -1527,7 +1523,7 @@ export default function Profile() {
                           </div>
                         </div>
 
-                        <div className="summary-item">
+                        <div className="summary-item full-width">
                           <div className="summary-icon">
                             <i className="fa-solid fa-envelope"></i>
                           </div>
@@ -1577,7 +1573,7 @@ export default function Profile() {
                           </div>
                         </div>
 
-                        <div className="summary-item">
+                        <div className="summary-item full-width">
                           <div className="summary-icon">
                             <i className="fa-solid fa-building-columns"></i>
                           </div>

@@ -155,14 +155,14 @@
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-.hero-stats {
+.universities-hero .hero-stats {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
   max-width: 550px;
 }
 
-.stat-item {
+.universities-hero .stat-item {
   text-align: center;
   padding: 1.5rem;
   background: rgba(255, 255, 255, 0.15);
@@ -172,24 +172,23 @@
   transition: all 0.3s ease;
 }
 
-.stat-item:hover {
+.universities-hero .stat-item:hover {
   background: rgba(255, 255, 255, 0.25);
   transform: translateY(-5px);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-.stat-number {
+.universities-hero .stat-number {
   font-size: 2.5rem;
   font-weight: 800;
-  color: white;
+  color: var(--text);
   margin-bottom: 0.5rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
-.stat-label {
+.universities-hero .stat-label {
   font-size: 1rem;
-  color: rgba(255, 255, 255, 0.9);
-  font-weight: 500;
+  color: var(--text-light);
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -1438,16 +1437,44 @@
     padding: 1rem 1.5rem;
   }
 
+  .details-section {
+    margin-bottom: 1.25rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  .details-section h3 {
+    margin-bottom: 0.75rem !important;
+    font-size: 1.15rem !important;
+  }
+
   .details-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .detail-item {
+    gap: 0.3rem !important;
+    padding: 0.75rem 0.5rem !important;
+    align-items: center !important;
+    text-align: center !important;
   }
 
   .courses-grid {
     grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .course-card {
+    padding: 0.85rem !important;
   }
 
   .facilities-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+  }
+
+  .facility-item {
+    padding: 0.5rem 0.75rem !important;
   }
 
   .modal-footer {
@@ -1483,20 +1510,21 @@
     margin-bottom: 2rem;
   }
 
-  .hero-stats {
-    grid-template-columns: repeat(3, 1fr);
+  .universities-hero .hero-stats {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
     gap: 1rem;
   }
 
-  .stat-item {
+  .universities-hero .stat-item {
     padding: 1rem;
   }
 
-  .stat-number {
+  .universities-hero .stat-number {
     font-size: 2rem;
   }
 
-  .stat-label {
+  .universities-hero .stat-label {
     font-size: 0.85rem;
   }
 
@@ -1523,17 +1551,18 @@
     font-size: 0.95rem;
   }
 
-  .hero-stats {
-    grid-template-columns: 1fr;
-    gap: 1rem;
+  .universities-hero .hero-stats {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.5rem;
   }
 
-  .stat-item {
-    padding: 1.25rem;
+  .universities-hero .stat-item {
+    padding: 0.75rem 0.5rem;
   }
 
-  .stat-number {
-    font-size: 2.2rem;
+  .universities-hero .stat-number {
+    font-size: 1.5rem;
   }
 
   .hero-image {
