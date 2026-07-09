@@ -540,10 +540,10 @@ function Marketplace() {
       {/* ── Seller Subscription Plans Section (Dynamic Inline Section) ── */}
       <section className="how-it-works" id="seller-pricing-section" style={{ background: '#faf7f2', padding: '5rem 0', borderTop: '1px solid #f0eae1' }}>
         <div className="container">
-          <div className="hiw-head" style={{ textAlign: 'center', marginBottom: '3rem' }}>
-            <span className="hiw-eyebrow" style={{ fontSize: '0.85rem', fontWeight: '700', color: '#a78b71', textTransform: 'uppercase', letterSpacing: '0.08em', display: 'block', marginBottom: '0.5rem' }}>Unlock Selling</span>
-            <h2 className="hiw-title" style={{ fontSize: '2.25rem', fontWeight: '800', color: '#2d3748', margin: '0 0 1rem 0' }}>Seller Membership Plans</h2>
-            <p className="hiw-subtitle" style={{ fontSize: '1.05rem', color: '#718096', maxWidth: '600px', margin: '0 auto', lineHeight: '1.6' }}>
+          <div className="hiw-head">
+            <span className="hiw-eyebrow">Unlock Selling</span>
+            <h2 className="hiw-title">Seller Membership Plans</h2>
+            <p className="hiw-subtitle" style={{ maxWidth: '600px' }}>
               Verify your security credentials and subscribe to a seller tier to list textbooks, lab materials, stationery, or electronics.
             </p>
           </div>

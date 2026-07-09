@@ -269,7 +269,8 @@
   padding: 1rem 1.25rem;
   border: 2px solid #e8e5e0;
   border-radius: 12px;
-  font-size: 1rem;
+  font-size: 0.95rem;
+  font-weight: 400;
   transition: all 0.3s ease;
   background: #fafaf8;
 }
@@ -291,12 +292,12 @@
   padding: 0.875rem 1.25rem;
   border: 2px solid #e8e5e0;
   border-radius: 12px;
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   background: white;
   cursor: pointer;
   transition: all 0.3s ease;
   color: #634f37;
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .filter-select:focus {
@@ -959,10 +960,18 @@
 
   .filters {
     flex-direction: column;
+    gap: 0.75rem !important;
   }
 
   .filter-select {
     width: 100%;
+    padding: 0.75rem 1rem !important;
+    font-size: 0.85rem !important;
+  }
+
+  .search-input {
+    padding: 0.75rem 1rem !important;
+    font-size: 0.9rem !important;
   }
 
   .modal-content {
@@ -980,14 +989,25 @@
   }
 
   .university-info {
-    flex-direction: column;
-    gap: 0.75rem;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.35rem !important;
+    padding: 0.6rem 0.4rem !important;
   }
 
   .info-item {
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
+    flex-direction: column !important;
+    align-items: center !important;
+    width: auto !important;
+  }
+
+  .info-item .label {
+    font-size: 0.65rem !important;
+  }
+
+  .info-item .value {
+    font-size: 0.78rem !important;
+    white-space: nowrap !important;
   }
 }
 
@@ -1430,7 +1450,7 @@
   }
 
   .details-modal .modal-header h2 {
-    font-size: 1.4rem;
+    font-size: 1.2rem !important;
   }
 
   .details-body {
@@ -1457,6 +1477,31 @@
     padding: 0.75rem 0.5rem !important;
     align-items: center !important;
     text-align: center !important;
+  }
+
+  .detail-item strong {
+    font-size: 0.75rem !important;
+  }
+
+  .detail-item span,
+  .detail-item p {
+    font-size: 0.85rem !important;
+  }
+
+  .facilities {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    gap: 0.35rem !important;
+    justify-content: flex-start !important;
+    margin: 0.75rem 0 !important;
+  }
+
+  .facility-tag {
+    display: inline-block !important;
+    width: auto !important;
+    font-size: 0.7rem !important;
+    padding: 0.3rem 0.6rem !important;
   }
 
   .courses-grid {

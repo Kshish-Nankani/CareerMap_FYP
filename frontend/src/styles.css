@@ -595,9 +595,7 @@ p {
   }
 
   .feature-image {
-    height: 100px !important;
-    margin: -0.75rem -0.75rem 0.6rem -0.75rem !important;
-    border-radius: var(--radius-lg) var(--radius-lg) 0 0 !important;
+    display: none !important;
   }
 
   .feature-card-header {
