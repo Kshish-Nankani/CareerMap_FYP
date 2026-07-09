@@ -375,9 +375,9 @@ const Dashboard = () => {
             </div>
             <div className="hero-image">
              <img 
-  src="public\images\dashbored image.webp"
-  alt="Students studying together"
-/>
+                src="/images/dashbored image.webp"
+                alt="Students studying together"
+              />
             </div>
           </div>
         </section>
