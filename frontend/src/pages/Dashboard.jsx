@@ -48,7 +48,7 @@ const journeySteps = [
 const featureCards = [
   {
     title: "Universities",
-    description: "Explore verified universities across Pakistan to find the right program that fits your career goals. Compare courses, admission details, and connect directly with university representatives.",
+    description: "Explore verified universities across Pakistan, compare courses, and connect with representatives.",
     icon: "fa-solid fa-university",
     image: 'images/universities.png',
     link: "/universities",
@@ -56,7 +56,7 @@ const featureCards = [
   },
   {
     title: "Mentorship & Peer Support",
-    description: "Connect with experienced mentors and peers who can guide you through academic challenges, career planning, and skill-building — because learning is better together.",
+    description: "Connect with mentors and peers for academic challenges and career planning.",
     icon: "fa-solid fa-users",
     image: 'images/mentorship.png',
     link: "/mentorship",
@@ -64,7 +64,7 @@ const featureCards = [
   },
   {
     title: "Student Marketplace",
-    description: "A trusted space for students to buy, sell, or exchange books, gadgets, and essentials within the campus community — safe, simple, and student-focused.",
+    description: "Buy, sell, or exchange books, gadgets, and essentials within the campus community.",
     icon: "fa-solid fa-store",
     image: 'images/marketplace.png',
     link: "/marketplace",
@@ -72,7 +72,7 @@ const featureCards = [
   },
   {
     title: "Take an Assessment",
-    description: "Discover your strengths and interests through personalized assessments that help you choose the right career path and academic direction.",
+    description: "Discover your strengths and interests through personalized career assessments.",
     icon: "fa-solid fa-clipboard-check",
     image: 'images/Assessment.png',
     link: "/assessment",
@@ -80,7 +80,7 @@ const featureCards = [
   },
   {
     title: "Sell Your Items",
-    description: "Got unused books or accessories? List and sell your items easily to other students and earn while decluttering — quick, safe, and campus-based.",
+    description: "Got unused books or accessories? List and sell them easily to other students.",
     icon: "fa-solid fa-tag",
     image: 'images/selling.png',
     link: "/marketplace/sell",
@@ -88,7 +88,7 @@ const featureCards = [
   },
   {
     title: "Apply for Tutor",
-    description: "Need help mastering a subject? Browse verified tutors, view ratings, and apply for personalized learning support from fellow students or professionals.",
+    description: "Browse verified tutors and apply for personalized learning support.",
     icon: "fa-solid fa-chalkboard-teacher",
     image: 'images/tutor.png',
     link: "/tutor/apply",
@@ -418,11 +418,6 @@ const Dashboard = () => {
                   to={feature.link} 
                   className="feature-card"
                 >
-                  {feature.image && (
-                    <div className="feature-card-media">
-                      <img src={feature.image} alt={feature.title} onError={(e)=>{e.currentTarget.src='https://picsum.photos/600/400'}} />
-                    </div>
-                  )}
                   <div className={`feature-card-icon ${feature.color}`}>
                     <i className={feature.icon}></i>
                   </div>

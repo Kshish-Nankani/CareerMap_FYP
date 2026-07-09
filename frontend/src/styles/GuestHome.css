@@ -260,83 +260,92 @@
 }
 @media (max-width: 768px) {
   .hero-modern {
-    min-height: auto;
-    padding: 3rem 0 2rem;
+    min-height: auto !important;
+    padding: 2rem 0 1rem !important;
   }
   .hero-split-layout {
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.5rem !important;
   }
   .hero-content-left {
     text-align: center;
     max-width: 100%;
   }
-  .hero-actions {
-    justify-content: center;
-  }
   .hero-images-right {
     width: 100%;
-    min-height: 400px;
+    min-height: 240px !important;
+    margin-top: 1rem !important;
   }
   .hero-title-main {
-    font-size: clamp(2rem, 8vw, 2.5rem);
-    margin-bottom: 1rem;
+    font-size: 1.8rem !important;
+    margin-bottom: 0.75rem !important;
+    line-height: 1.25 !important;
   }
   .hero-description {
-    font-size: 1rem;
-    margin-bottom: 2rem;
+    font-size: 0.85rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 1.25rem !important;
   }
   .hero-actions {
-    flex-direction: row;
-    justify-content: center;
-    gap: 0.75rem;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    margin-top: 1rem !important;
   }
   .btn-hero {
-    padding: 0.9rem 1.5rem;
-    font-size: 0.95rem;
-    flex: 1;
-    max-width: 200px;
+    padding: 0.6rem 1rem !important;
+    font-size: 0.85rem !important;
+    flex: 1 !important;
+    max-width: 150px !important;
+    border-radius: 30px !important;
+    box-shadow: 0 4px 8px rgba(99, 79, 55, 0.2) !important;
+    white-space: nowrap !important;
+    text-align: center !important;
+    display: inline-block !important;
   }
   .circle-1 {
-    width: 140px;
-    height: 140px;
+    width: 90px !important;
+    height: 90px !important;
     top: 5%;
     left: 2%;
   }
   .circle-2 {
-    width: 220px;
-    height: 220px;
+    width: 150px !important;
+    height: 150px !important;
   }
   .circle-3 {
-    width: 160px;
-    height: 160px;
+    width: 110px !important;
+    height: 110px !important;
     bottom: 10%;
     right: 2%;
   }
   .hero-circle {
-    border-width: 5px;
+    border-width: 4px !important;
   }
 }
 @media (max-width: 480px) {
   .hero-modern {
-    padding: 2rem 0 1.5rem;
+    padding: 1.5rem 0 0.75rem !important;
   }
   .hero-images-right {
-    min-height: 300px;
+    min-height: 170px !important;
+    margin-top: 0.75rem !important;
   }
   .circle-1 {
-    width: 100px;
-    height: 100px;
+    width: 65px !important;
+    height: 65px !important;
   }
   .circle-2 {
-    width: 160px;
-    height: 160px;
+    width: 105px !important;
+    height: 105px !important;
   }
   .circle-3 {
-    width: 120px;
-    height: 120px;
+    width: 80px !important;
+    height: 80px !important;
   }
   .hero-circle {
-    border-width: 4px;
+    border-width: 3px !important;
   }
 }

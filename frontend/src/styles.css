@@ -589,6 +589,42 @@ p {
     border-radius: 6px !important;
     white-space: nowrap !important;
   }
+
+  .card {
+    padding: 1rem !important;
+  }
+
+  .feature-image {
+    height: 120px !important;
+    margin: -1rem -1rem 0.75rem -1rem !important;
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0 !important;
+  }
+
+  .feature-card .icon {
+    font-size: 20px !important;
+    margin-bottom: 10px !important;
+    margin-top: 0.25rem !important;
+  }
+
+  .card-title {
+    font-size: 1.05rem !important;
+    margin-bottom: 6px !important;
+  }
+
+  .muted {
+    font-size: 0.82rem !important;
+    line-height: 1.4 !important;
+  }
+
+  .footer-content {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+    text-align: center !important;
+  }
+
+  .footer-links {
+    align-items: center !important;
+  }
 }
 
 .hero { 
