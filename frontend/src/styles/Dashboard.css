@@ -1359,11 +1359,14 @@
   }
   
   .feature-card {
-    padding: 1.25rem;
+    padding: 1.15rem !important;
+    gap: 0.6rem !important;
   }
   
   .feature-card-media {
-    height: 160px;
+    height: 110px !important;
+    margin: -1.15rem -1.15rem 0.6rem -1.15rem !important;
+    border-radius: 12px 12px 0 0 !important;
   }
   
   .trending-card {
@@ -1393,21 +1396,36 @@
   }
   
   .feature-card {
-    padding: 1.5rem;
+    padding: 1.15rem !important;
+    gap: 0.6rem !important;
   }
   
   .feature-card-media {
-    height: 180px;
+    height: 110px !important;
+    margin: -1.15rem -1.15rem 0.6rem -1.15rem !important;
+    border-radius: 12px 12px 0 0 !important;
   }
   
   .feature-card-icon {
-    width: 60px;
-    height: 60px;
-    font-size: 1.75rem;
+    width: 40px !important;
+    height: 40px !important;
+    font-size: 1.15rem !important;
+    margin-top: 0 !important;
   }
   
   .feature-card-title {
-    font-size: 1.25rem;
+    font-size: 1.05rem !important;
+    font-weight: 600 !important;
+  }
+
+  .feature-card-description {
+    font-size: 0.82rem !important;
+    line-height: 1.35 !important;
+    margin-bottom: 0.35rem !important;
+  }
+
+  .feature-card-arrow {
+    display: none !important;
   }
   
   .trending-card {
