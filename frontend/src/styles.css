@@ -547,7 +547,7 @@ p {
   }
   
   .header-inner {
-    flex-wrap: wrap;
+    flex-wrap: nowrap !important;
     position: relative;
   }
   
@@ -1101,7 +1101,8 @@ p {
   .dashboard-header .header-inner,
   .assessment-header .header-inner,
   .header .header-inner {
-    padding: 14px 1.5rem !important;
+    padding: 10px 1rem !important;
+    flex-wrap: nowrap !important;
   }
 }
 
