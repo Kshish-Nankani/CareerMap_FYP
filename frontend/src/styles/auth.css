@@ -706,10 +706,12 @@
   }
 
   .form-meta {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.6rem !important;
-    margin-bottom: 0.65rem !important;
+    flex-direction: row !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    gap: 0.5rem !important;
+    margin-bottom: 0.5rem !important;
+    width: 100% !important;
   }
   
   .form-actions {
@@ -719,13 +721,14 @@
   }
   
   .form-actions .btn {
-    width: 100%;
-    padding: 0.7rem;
-    font-size: 0.85rem;
+    width: 100% !important;
+    padding: 0.55rem !important;
+    font-size: 0.82rem !important;
   }
   
-  .checkbox span {
-    font-size: 0.75rem;
+  .checkbox span,
+  .link {
+    font-size: 0.72rem !important;
   }
   
   .auth-error,
