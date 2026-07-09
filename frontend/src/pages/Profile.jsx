@@ -4,7 +4,7 @@ import { MessageCircle, Trash2, Unlock } from 'lucide-react'
 import { useAuth } from '../contexts/AuthContext'
 import { useToast } from '../contexts/ToastContext'
 import useChatUnreadCount from '../hooks/useChatUnreadCount'
-import { fetchWithErrorHandling } from '../utils/api'
+import { fetchWithErrorHandling, API_BASE_URL } from '../utils/api'
 import { getAuthToken } from '../utils/authStorage'
 import ConfirmModal from '../components/ConfirmModal'
 import '../styles/Profile.css'
@@ -455,7 +455,7 @@ export default function Profile() {
     try {
       setUnblockingInProgress(true)
       const token = getAuthToken()
-      const response = await fetch(`/api/chat/conversations/${unblockingConversationId}/block`, {
+      const response = await fetch(`${API_BASE_URL}/chat/conversations/${unblockingConversationId}/block`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,
@@ -518,7 +518,7 @@ export default function Profile() {
 
     try {
       const token = getAuthToken()
-      const response = await fetch(`/api/chat/agreements/${agreementToDelete}`, {
+      const response = await fetch(`${API_BASE_URL}/chat/agreements/${agreementToDelete}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`,

@@ -6,6 +6,8 @@ import { useAuth } from '../contexts/AuthContext';
 import { useToast } from '../contexts/ToastContext';
 import useChatUnreadCount from '../hooks/useChatUnreadCount';
 import { getAuthToken } from '../utils/authStorage';
+import { API_BASE_URL } from '../utils/api';
+
 import ConfirmModal from '../components/ConfirmModal';
 import '../styles/Dashboard.css';
 import '../styles/logoAnimations.css';
@@ -132,7 +134,7 @@ const Dashboard = () => {
   const fetchCareerRecommendations = async () => {
     try {
       setLoadingCareers(true);
-      const response = await fetch('http://localhost:5000/api/careers');
+      const response = await fetch(`${API_BASE_URL}/careers`);
       const data = await response.json();
       
       if (data.success) {
@@ -194,7 +196,7 @@ const Dashboard = () => {
 
     try {
       const token = getAuthToken()
-      const response = await fetch(`http://localhost:5000/api/admin/careers/${careerToDelete}`, {
+      const response = await fetch(`${API_BASE_URL}/admin/careers/${careerToDelete}`, {
         method: 'DELETE',
         headers: { Authorization: `Bearer ${token}` }
       });
@@ -258,8 +260,8 @@ const Dashboard = () => {
       };
 
       const url = careerModalMode === 'create' 
-        ? 'http://localhost:5000/api/admin/careers'
-        : `http://localhost:5000/api/admin/careers/${selectedCareer._id}`;
+        ? `${API_BASE_URL}/admin/careers`
+        : `${API_BASE_URL}/admin/careers/${selectedCareer._id}`;
 
       const method = careerModalMode === 'create' ? 'POST' : 'PUT';
 

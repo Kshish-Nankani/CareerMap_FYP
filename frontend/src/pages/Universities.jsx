@@ -5,6 +5,8 @@ import { useAuth } from '../contexts/AuthContext';
 import { useToast } from '../contexts/ToastContext';
 import useChatUnreadCount from '../hooks/useChatUnreadCount';
 import { getAuthToken } from '../utils/authStorage';
+import { API_BASE_URL, SERVER_URL } from '../utils/api';
+
 import ConfirmModal from '../components/ConfirmModal';
 import '../styles/Universities.css'
 import '../styles/logoAnimations.css';
@@ -71,7 +73,7 @@ const Universities = () => {
         ...(filterDiscipline && { discipline: filterDiscipline })
       });
 
-      const response = await fetch(`http://localhost:5000/api/universities?${params}`);
+      const response = await fetch(`${API_BASE_URL}/universities?${params}`);
       const data = await response.json();
       
       setUniversities(data.universities);
@@ -86,7 +88,7 @@ const Universities = () => {
 
   const fetchStates = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/universities/filters/states');
+      const response = await fetch(`${API_BASE_URL}/universities/filters/states`);
       const data = await response.json();
       setStates(data);
     } catch (error) {
@@ -96,7 +98,7 @@ const Universities = () => {
 
   const fetchCities = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/universities/filters/cities');
+      const response = await fetch(`${API_BASE_URL}/universities/filters/cities`);
       const data = await response.json();
       setCities(data);
     } catch (error) {
@@ -106,7 +108,7 @@ const Universities = () => {
 
   const fetchDisciplines = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/universities/filters/disciplines');
+      const response = await fetch(`${API_BASE_URL}/universities/filters/disciplines`);
       const data = await response.json();
       setDisciplines(data);
     } catch (error) {
@@ -142,8 +144,8 @@ const Universities = () => {
     try {
       const token = getAuthToken()
       const url = editingUniversity 
-        ? `http://localhost:5000/api/universities/${editingUniversity._id}`
-        : 'http://localhost:5000/api/universities';
+        ? `${API_BASE_URL}/universities/${editingUniversity._id}`
+        : `${API_BASE_URL}/universities`;
       
       const method = editingUniversity ? 'PUT' : 'POST';
 
@@ -181,7 +183,7 @@ const Universities = () => {
 
     try {
       const token = getAuthToken()
-      const response = await fetch(`http://localhost:5000/api/universities/${universityToDelete}`, {
+      const response = await fetch(`${API_BASE_URL}/universities/${universityToDelete}`, {
         method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${token}`
@@ -315,7 +317,7 @@ const Universities = () => {
               <Link to="/profile" className="user-avatar">
                 {user?.profileImage ? (
                   <img 
-                    src={user.profileImage.startsWith('http') ? user.profileImage : `http://localhost:5000${user.profileImage}`} 
+                    src={user.profileImage.startsWith('http') ? user.profileImage : `${SERVER_URL}${user.profileImage}`} 
                     alt={user.name || 'User'} 
                     style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '50%' }}
                   />
@@ -459,10 +461,10 @@ const Universities = () => {
               <div key={university._id} className="university-card">
                 <div className="university-image">
                   <img 
-                    src={university.image ? `http://localhost:5000${university.image}` : '/images/university-placeholder.jpg'}
+                    src={university.image ? `${SERVER_URL}${university.image}` : '/images/university-placeholder.jpg'}
                     alt={university.name}
                     onError={(e) => {
-                      e.target.src = 'http://localhost:5000/images/university-placeholder.jpg';
+                      e.target.src = `${SERVER_URL}/images/university-placeholder.jpg`;
                     }}
                   />
                   <span className={`university-type ${university.type.toLowerCase()}`}>

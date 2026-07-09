@@ -4,6 +4,8 @@ import { useCart } from '../contexts/CartContext'
 import { useAuth } from '../contexts/AuthContext'
 import { useToast } from '../contexts/ToastContext'
 import { getAuthToken } from '../utils/authStorage'
+import { API_BASE_URL } from '../utils/api'
+
 import '../styles/CheckoutModal.css'
 
 function CheckoutModal({ isOpen, onClose, items, subtotal }) {
@@ -81,7 +83,7 @@ function CheckoutModal({ isOpen, onClose, items, subtotal }) {
         image: item.image
       }))
       
-      const response = await fetch('http://localhost:5000/api/orders/create', {
+      const response = await fetch(`${API_BASE_URL}/orders/create`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

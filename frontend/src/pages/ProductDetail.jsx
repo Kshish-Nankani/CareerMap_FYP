@@ -6,6 +6,8 @@ import { useToast } from '../contexts/ToastContext'
 import { useCart } from '../contexts/CartContext'
 import useChatUnreadCount from '../hooks/useChatUnreadCount'
 import { getAuthToken } from '../utils/authStorage'
+import { API_BASE_URL } from '../utils/api'
+
 import '../styles/ProductDetail.css'
 import '../styles/logoAnimations.css'
 
@@ -38,7 +40,7 @@ function ProductDetail() {
   const fetchProductDetails = async () => {
     try {
       setLoading(true)
-      const response = await fetch(`http://localhost:5000/api/marketplace/${productId}`)
+      const response = await fetch(`${API_BASE_URL}/marketplace/${productId}`)
       const data = await response.json()
       
       if (data.success) {
@@ -106,7 +108,7 @@ function ProductDetail() {
         paymentMethod: 'COD'
       }
 
-      const response = await fetch('http://localhost:5000/api/orders/create', {
+      const response = await fetch(`${API_BASE_URL}/orders/create`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -161,7 +163,7 @@ function ProductDetail() {
         comment: reviewForm.comment
       }
 
-      const response = await fetch(`http://localhost:5000/api/marketplace/${productId}/reviews`, {
+      const response = await fetch(`${API_BASE_URL}/marketplace/${productId}/reviews`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

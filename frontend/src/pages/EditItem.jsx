@@ -5,6 +5,8 @@ import { useAuth } from '../contexts/AuthContext'
 import { useToast } from '../contexts/ToastContext'
 import useChatUnreadCount from '../hooks/useChatUnreadCount'
 import { getAuthToken } from '../utils/authStorage'
+import { API_BASE_URL } from '../utils/api'
+
 import '../styles/SellItem.css'
 import '../styles/logoAnimations.css'
 
@@ -41,7 +43,7 @@ function EditItem() {
 
   const fetchCategories = async () => {
     try {
-      const response = await fetch('http://localhost:5000/api/marketplace/categories/all')
+      const response = await fetch(`${API_BASE_URL}/marketplace/categories/all`)
       const data = await response.json()
       if (data.success) {
         setCategories(data.data)
@@ -55,7 +57,7 @@ function EditItem() {
   const fetchProduct = async () => {
     try {
       setLoading(true)
-      const response = await fetch(`http://localhost:5000/api/marketplace/${id}`)
+      const response = await fetch(`${API_BASE_URL}/marketplace/${id}`)
       const data = await response.json()
       if (data.success) {
         const p = data.data
@@ -213,7 +215,7 @@ function EditItem() {
         images: formData.images.length > 0 ? formData.images : [formData.image]
       }
 
-      const response = await fetch(`http://localhost:5000/api/marketplace/${id}`, {
+      const response = await fetch(`${API_BASE_URL}/marketplace/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
