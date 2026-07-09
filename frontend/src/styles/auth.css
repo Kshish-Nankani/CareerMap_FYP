@@ -499,40 +499,43 @@
   }
   
   .auth-brand {
-    margin-bottom: 1rem;
+    margin-bottom: 0 !important;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    width: 100%;
+    width: auto;
   }
   
   .auth-brand .logo {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 8px;
+    justify-content: flex-start;
+    gap: 6px;
     width: auto;
   }
 
   .auth-brand .logo img {
-    width: 45px !important;
-    height: 45px !important;
+    width: 35px !important;
+    height: 35px !important;
   }
 
   .auth-brand .logo-text {
-    font-size: 22px !important;
+    font-size: 18px !important;
   }
 
   .auth-brand .logo-tagline {
-    font-size: 8px !important;
+    font-size: 7px !important;
   }
   
   .back-row {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0 !important;
   }
 
   .back-link {
-    font-size: 0.8rem;
+    font-size: 0.75rem !important;
+    padding: 0.4rem 0.65rem !important;
+    border-radius: 6px !important;
+    background: rgba(167, 139, 113, 0.08) !important;
   }
   
   .auth-card {
@@ -789,16 +792,40 @@
     font-size: 0.875rem;
 }
 
-/* Mobile Back Row */
+/* Mobile Back Row & Grid Layout Alignment */
 .mobile-back-row {
   display: none;
 }
 
 @media (max-width: 1023px) {
+  .auth-left {
+    display: grid !important;
+    grid-template-columns: 1fr auto !important;
+    align-items: center !important;
+    gap: 0.75rem !important;
+    width: 100% !important;
+  }
   .mobile-back-row {
-    display: flex;
-    justify-content: flex-start;
-    width: 100%;
-    margin-bottom: 1.5rem;
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    margin-bottom: 0 !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    width: auto !important;
+  }
+  .auth-brand {
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    margin-bottom: 0 !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+  }
+  .auth-brand .logo {
+    justify-content: flex-start !important;
+  }
+  .auth-card {
+    grid-column: 1 / span 2 !important;
+    grid-row: 2 !important;
   }
 }
