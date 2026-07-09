@@ -52,11 +52,11 @@ export default function GuestHome() {
     <div className="site">
       <header className="header">
         <div className="container header-inner">
-          <div className="logo-container" style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
-            <img src="/images/CM.png" alt="CareerMap Logo" className="logo-combined" style={{ width: '128px', height: '128px', objectFit: 'contain' }} />
-            <div className="logo-brand-group" style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start', justifyContent: 'center', lineHeight: '1.15' }}>
-              <span className="logo-text" style={{ fontSize: '30px', fontWeight: '800', color: '#5c4a3d', letterSpacing: '-0.5px' }}>CareerMap</span>
-              <span className="logo-tagline" style={{ fontSize: '11px', fontWeight: '600', color: '#8b6e58', marginTop: '2px', letterSpacing: '0.5px', textTransform: 'uppercase' }}>Find Your Way. Own Your Future.</span>
+          <div className="logo-container">
+            <img src="/images/CM.png" alt="CareerMap Logo" className="logo-combined" />
+            <div className="logo-brand-group">
+              <span className="logo-text">CareerMap</span>
+              <span className="logo-tagline">Find Your Way. Own Your Future.</span>
             </div>
           </div>
           <nav className="nav-actions">
