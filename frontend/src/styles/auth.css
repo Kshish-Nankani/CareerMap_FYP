@@ -500,10 +500,31 @@
   
   .auth-brand {
     margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
   
   .auth-brand .logo {
-    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: auto;
+  }
+
+  .auth-brand .logo img {
+    width: 45px !important;
+    height: 45px !important;
+  }
+
+  .auth-brand .logo-text {
+    font-size: 22px !important;
+  }
+
+  .auth-brand .logo-tagline {
+    font-size: 8px !important;
   }
   
   .back-row {

@@ -1227,6 +1227,26 @@ p {
     margin-right: auto !important; /* Push mobile actions right */
   }
   
+  .dashboard-header .logo-container .logo-combined,
+  .assessment-header .logo-container .logo-combined,
+  .header .logo-container .logo-combined {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px !important;
+  }
+
+  .dashboard-header .logo-container .logo-text,
+  .assessment-header .logo-container .logo-text,
+  .header .logo-container .logo-text {
+    font-size: 20px !important;
+  }
+
+  .dashboard-header .logo-container .logo-tagline,
+  .assessment-header .logo-container .logo-tagline,
+  .header .logo-container .logo-tagline {
+    font-size: 8px !important;
+  }
+
   .dashboard-header .nav-links,
   .assessment-header .nav-links,
   .header .nav-links {

@@ -1578,64 +1578,141 @@
 }
 
 @media (max-width: 768px) {
+  .profile-tabs {
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    padding: 0.35rem !important;
+    border-radius: 8px !important;
+  }
+  .profile-tabs::-webkit-scrollbar {
+    display: none !important;
+  }
+  .tab-button {
+    flex: 0 0 auto !important;
+    padding: 0.6rem 1rem !important;
+    font-size: 0.85rem !important;
+  }
+
   .profile-hero {
     grid-template-columns: 1fr;
-    gap: 2rem;
-    padding: 2rem;
+    gap: 1.5rem;
+    padding: 1.25rem;
+    border-radius: 12px;
   }
 
   .profile-hero-left {
     flex-direction: column;
     text-align: center;
     align-items: center;
+    gap: 1.25rem;
   }
 
   .profile-avatar-wrapper {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
+  }
+
+  .profile-avatar {
+    border-width: 4px;
   }
 
   .profile-name {
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
 
   .profile-career-interest {
     text-align: center;
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
   }
 
   .profile-quick-info {
     grid-template-columns: 1fr;
+    gap: 0.75rem;
   }
 
   .quick-info-item {
     justify-content: center;
+    font-size: 0.85rem;
+  }
+
+  .quick-info-item i {
+    font-size: 0.9rem;
   }
 
   .profile-tags {
     justify-content: center;
+    margin-bottom: 1.25rem;
+  }
+
+  .profile-tag {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.75rem;
   }
 
   .profile-actions {
     justify-content: center;
+    gap: 0.75rem;
+  }
+
+  .profile-actions button,
+  .profile-actions .btn-primary,
+  .profile-actions .btn-secondary {
+    padding: 0.65rem 1rem !important;
+    font-size: 0.85rem !important;
+  }
+
+  .profile-card {
+    border-radius: 12px;
+  }
+
+  .card-header-tab {
+    padding: 1rem 1.25rem;
+  }
+
+  .card-header-tab .card-title {
+    font-size: 1.15rem;
+  }
+
+  .card-header-tab .card-title i {
+    font-size: 1rem;
+  }
+
+  .tab-indicator {
+    height: 24px;
   }
 
   .info-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .info-label {
+    font-size: 0.8rem;
+  }
+
+  .info-value {
+    font-size: 0.9rem;
   }
 
   .academic-info-grid {
     grid-template-columns: 1fr;
-    gap: 1.5rem;
+    gap: 1rem;
   }
 
   .tutor-applications-metrics,
   .tutor-app-form-grid,
   .tutor-application-main-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
   }
 
   .card-content {
-    padding: 1.5rem;
+    padding: 1.25rem;
   }
 }
 
