@@ -1867,12 +1867,12 @@
   }
 
   .profile-avatar-wrapper {
-    width: 150px;
-    height: 150px;
+    width: 140px;
+    height: 140px;
   }
 
   .profile-name {
-    font-size: 2rem;
+    font-size: 1.85rem;
   }
 
   .profile-hero-right {
@@ -1891,121 +1891,16 @@
   }
 }
 
-/* Tablet Small (600px - 768px) */
+/* Tablet Small & Mobile (max-width: 768px) */
 @media (max-width: 768px) {
   .profile-main {
-    padding: 2rem 1rem;
+    padding: 1.5rem 0.75rem;
   }
 
   .profile-hero {
     grid-template-columns: 1fr;
-    padding: 1.5rem;
-    gap: 1.5rem;
-  }
-
-  .profile-hero-left {
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    text-align: center;
-  }
-
-  .profile-avatar-wrapper {
-    width: 130px;
-    height: 130px;
-  }
-
-  .profile-name {
-    font-size: 1.75rem;
-  }
-
-  .profile-career-interest {
-    font-size: 1rem;
-  }
-
-  .profile-header-info {
-    width: 100%;
-  }
-
-  .profile-quick-info {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 0.75rem;
-  }
-
-  .profile-hero-right {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .profile-actions {
-    flex-direction: column;
-  }
-
-  .profile-actions button {
-    width: 100%;
-  }
-
-  .tabs-wrapper {
-    padding: 0;
-    margin: 1.5rem 0 1rem 0;
-  }
-
-  .tabs {
-    padding: 0 0.5rem;
-    flex-wrap: wrap;
-  }
-
-  .tab {
-    font-size: 0.9rem;
-    padding: 0.75rem 1rem;
-  }
-
-  .card {
-    border-radius: 12px;
     padding: 1.25rem;
-  }
-
-  .card-header {
-    padding: 1rem 1.25rem;
-    margin: -1.25rem -1.25rem 1rem -1.25rem;
-  }
-
-  .card-title {
-    font-size: 1.35rem;
-  }
-
-  .profile-grid-2col {
-    grid-template-columns: 1fr;
-  }
-
-  .order-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .tutor-offerings-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .my-items-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-content {
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-  }
-}
-
-/* Mobile (< 600px) */
-@media (max-width: 600px) {
-  .profile-main {
-    padding: 1.5rem 1rem;
-  }
-
-  .profile-hero {
-    padding: 1.25rem;
-    gap: 1rem;
+    gap: 1.25rem;
     margin-bottom: 1rem;
   }
 
@@ -2022,23 +1917,27 @@
   }
 
   .profile-name {
-    font-size: 1.5rem;
-    margin-bottom: 0.35rem;
+    font-size: 1.4rem;
   }
 
   .profile-career-interest {
     font-size: 0.9rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
+    text-align: center;
+  }
+
+  .profile-header-info {
+    width: 100%;
   }
 
   .profile-quick-info {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr !important;
     gap: 0.6rem;
   }
 
   .quick-info-item {
+    justify-content: center;
     font-size: 0.85rem;
-    gap: 0.5rem;
   }
 
   .profile-hero-right {
@@ -2048,52 +1947,74 @@
   }
 
   .profile-actions {
-    flex-direction: column;
-    gap: 0.75rem;
+    flex-direction: row !important;
+    justify-content: center !important;
+    gap: 0.75rem !important;
   }
 
-  .profile-actions button {
-    width: 100%;
-    padding: 0.75rem;
-    font-size: 0.95rem;
+  .profile-actions button,
+  .profile-actions .btn-primary,
+  .profile-actions .btn-secondary {
+    width: auto !important;
+    padding: 0.6rem 1rem !important;
+    font-size: 0.85rem !important;
   }
 
-  .tabs-wrapper {
-    padding: 0;
-    margin: 1rem 0 0.75rem 0;
-    overflow-x: auto;
+  .profile-tabs {
+    overflow-x: auto !important;
+    white-space: nowrap !important;
+    display: flex !important;
+    justify-content: flex-start !important;
+    -webkit-overflow-scrolling: touch !important;
+    scrollbar-width: none !important;
+    padding: 0.35rem !important;
+    border-radius: 8px !important;
+    background: white !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+    margin-bottom: 1.25rem !important;
   }
 
-  .tabs {
-    min-width: 100%;
-    padding: 0;
-    flex-wrap: nowrap;
-    overflow-x: auto;
+  .profile-tabs::-webkit-scrollbar {
+    display: none !important;
   }
 
-  .tab {
-    font-size: 0.85rem;
-    padding: 0.65rem 0.9rem;
-    flex-shrink: 0;
+  .tab-button {
+    flex: 0 0 auto !important;
+    padding: 0.6rem 1rem !important;
+    font-size: 0.85rem !important;
   }
 
-  .tab-content {
-    padding: 1rem;
+  .profile-card {
+    border-radius: 12px;
   }
 
-  .card {
-    border-radius: 10px;
-    padding: 1rem;
-    margin-bottom: 1rem;
+  .card-header-tab {
+    padding: 1rem 1.25rem;
   }
 
-  .card-header {
-    padding: 0.9rem 1rem;
-    margin: -1rem -1rem 0.9rem -1rem;
+  .card-header-tab .card-title {
+    font-size: 1.15rem;
   }
 
-  .card-title {
-    font-size: 1.2rem;
+  .card-header-tab .card-title i {
+    font-size: 1rem;
+  }
+
+  .card-content {
+    padding: 1.25rem;
+  }
+
+  .info-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .info-label {
+    font-size: 0.8rem;
+  }
+
+  .info-value {
+    font-size: 0.9rem;
   }
 
   .profile-grid-2col {
@@ -2112,55 +2033,60 @@
     grid-template-columns: 1fr;
   }
 
-  .tutor-applications-list {
-    gap: 0.75rem;
-  }
-
-  .btn-primary,
-  .btn-secondary,
-  .btn-danger,
-  .btn-success {
-    width: 100%;
-    padding: 0.75rem;
-    font-size: 0.95rem;
-  }
-
-  .btn-small {
-    width: auto;
-  }
-
-  .form-field {
-    margin-bottom: 1rem;
-  }
-
-  .form-label {
-    font-size: 0.9rem;
-  }
-
-  .form-input,
-  .form-select,
-  .form-textarea {
-    font-size: 1rem;
-    padding: 0.75rem;
-  }
-
-  .footer-inner {
-    padding: 0 1rem;
-  }
-
   .footer-content {
     grid-template-columns: 1fr;
-    gap: 1.25rem;
-    margin-bottom: 1.5rem;
+    gap: 1.5rem;
+  }
+}
+
+/* Mobile Small (< 480px) */
+@media (max-width: 480px) {
+  .profile-main {
+    padding: 1rem 0.5rem;
   }
 
-  .footer-section h4 {
-    font-size: 1rem;
-    margin-bottom: 0.75rem;
+  .profile-hero {
+    padding: 1rem;
+    gap: 1rem;
   }
 
-  .footer-section p {
-    font-size: 0.9rem;
+  .profile-avatar-wrapper {
+    width: 95px;
+    height: 95px;
+  }
+
+  .profile-name {
+    font-size: 1.25rem;
+  }
+
+  .profile-career-interest {
+    font-size: 0.85rem;
+  }
+
+  .profile-actions {
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 0.5rem !important;
+  }
+
+  .profile-actions button,
+  .profile-actions .btn-primary,
+  .profile-actions .btn-secondary {
+    width: 100% !important;
+    padding: 0.75rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  .card-header-tab {
+    padding: 0.9rem 1rem;
+  }
+
+  .card-header-tab .card-title {
+    font-size: 1.05rem;
+  }
+
+  .card-content {
+    padding: 1rem;
   }
 
   .tutor-app-form-grid {
@@ -2170,10 +2096,6 @@
 
   .tutor-application-main-grid {
     grid-template-columns: 1fr;
-  }
-
-  .modal {
-    border-radius: 12px;
   }
 
   .modal-content {
@@ -2187,3 +2109,4 @@
     padding-top: 92px !important;
   }
 }
+
