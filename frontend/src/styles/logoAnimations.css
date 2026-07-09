@@ -1,0 +1,59 @@
+/* Logo Animation Keyframes */
+@keyframes floatBounce {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes gentleRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.9;
+    transform: scale(1.02);
+  }
+}
+
+@keyframes glow {
+  0%, 100% {
+    filter: drop-shadow(0 0 0px rgba(167, 139, 113, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0 0 8px rgba(167, 139, 113, 0.8));
+  }
+}
+
+/* Logo Animation Classes */
+.logo-float {
+  animation: floatBounce 3s ease-in-out infinite;
+}
+
+.logo-rotate {
+  animation: gentleRotate 8s linear infinite;
+}
+
+.logo-pulse {
+  animation: pulse 2.5s ease-in-out infinite;
+}
+
+.logo-glow {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.logo-combined {
+  animation: floatBounce 3s ease-in-out infinite, glow 2s ease-in-out infinite;
+}

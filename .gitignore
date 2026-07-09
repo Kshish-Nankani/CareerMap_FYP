@@ -1,15 +1,6 @@
-# Node
-node_modules/
-
-# Build outputs
-frontend/dist/
-backend/dist/
-
-# Logs
-*.log
-
-# Environment files (keep secrets out of git)
-.env
-*/.env
-backend/.env
-frontend/.env
+**/node_modules
+**/.env
+frontend/dist
+.vercel
+logs
+uploads

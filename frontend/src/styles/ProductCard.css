@@ -1,0 +1,337 @@
+/* Product Card Styles */
+.product-card {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  height: 100%;
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(167, 139, 113, 0.15);
+  border-color: rgba(167, 139, 113, 0.3);
+}
+
+/* Image Section */
+.product-image-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.product-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+/* Condition Badge */
+.product-condition {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: white;
+  color: var(--brand);
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(167, 139, 113, 0.3);
+}
+
+.condition-new {
+  background: #e8f5e9 !important;
+  color: #2e7d32 !important;
+  border-color: #2e7d32 !important;
+}
+
+.condition-used {
+  background: #fff3e0 !important;
+  color: #f57f17 !important;
+  border-color: #f57f17 !important;
+}
+
+/* Sold Badge */
+.product-sold-badge {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background: rgba(167, 139, 113, 0.9);
+  color: white;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+/* Content Section */
+.product-content {
+  flex: 1;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.product-title {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Seller Info */
+.product-seller-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px;
+  background: #f9f9f9;
+  border-radius: 6px;
+  margin: 4px 0;
+}
+
+.seller-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid #a78b71;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.seller-avatar:hover {
+  transform: scale(1.1);
+}
+
+.seller-email {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  flex: 1;
+}
+
+/* Location */
+.product-location {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: var(--text-light);
+  flex-wrap: wrap;
+}
+
+.product-location span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.product-location span:not(:last-child)::after {
+  content: '•';
+  margin-left: 6px;
+  color: var(--border);
+}
+
+/* Rating */
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+.stars svg.filled {
+  color: #ffc107;
+  fill: #ffc107;
+}
+
+.stars svg.empty {
+  color: #e0e0e0;
+}
+
+.rating-text {
+  color: var(--text-light);
+}
+
+/* Price */
+.product-price {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--brand);
+  margin: 0.5rem 0;
+}
+
+/* Stock Status */
+.product-stock {
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 6px;
+  width: fit-content;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.product-stock.in-stock {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.product-stock.out-of-stock {
+  background: #ffebee;
+  color: #c62828;
+}
+
+/* Action Buttons */
+.product-actions {
+  display: flex;
+  gap: 0.75rem;
+  padding: 0 1rem 1rem 1rem;
+  flex-wrap: wrap;
+}
+
+.btn-details,
+.btn-cart {
+  flex: 1;
+  min-width: 120px;
+  padding: 0.65rem 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.26s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.btn-details {
+  background: white;
+  color: var(--brand);
+  border: 1.5px solid var(--brand);
+}
+
+.btn-details:hover {
+  background: rgba(167, 139, 113, 0.05);
+  transform: translateY(-2px);
+}
+
+.btn-cart {
+  background: linear-gradient(135deg, #a78b71 0%, #7a5e44 100%);
+  color: white;
+  box-shadow: 0 2px 8px rgba(167, 139, 113, 0.3);
+}
+
+.btn-cart:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(167, 139, 113, 0.4);
+}
+
+.btn-cart:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .product-card {
+    border-radius: 8px;
+  }
+
+  .product-content {
+    padding: 0.875rem;
+    gap: 0.6rem;
+  }
+
+  .product-price {
+    font-size: 1.1rem;
+  }
+
+  .product-actions {
+    padding: 0 0.875rem 0.875rem 0.875rem;
+  }
+
+  .btn-details,
+  .btn-cart {
+    font-size: 0.8rem;
+    padding: 0.6rem 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .product-actions {
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+
+  .btn-details,
+  .btn-cart {
+    width: 100%;
+    min-width: unset;
+  }
+}
+
+/* Custom bronze text pill buttons for Marketplace product card admin controls */
+.marketplace-admin-btn {
+  background-color: #5c4a38 !important; /* Matches exactly the dark warm bronze */
+  color: #ffffff !important;
+  font-family: 'Inter', 'Outfit', sans-serif !important;
+  font-weight: 700 !important;
+  font-size: 0.82rem !important;
+  padding: 0.55rem 1.1rem !important;
+  border-radius: 10px !important;
+  border: none !important;
+  cursor: pointer !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.35rem !important;
+  transition: all 0.2s ease !important;
+  box-shadow: 0 2px 6px rgba(92, 74, 56, 0.1) !important;
+  text-decoration: none !important;
+  white-space: nowrap !important;
+  flex: 1;
+}
+
+.marketplace-admin-btn:hover {
+  background-color: #705b46 !important;
+  transform: translateY(-2px) !important;
+  box-shadow: 0 4px 10px rgba(92, 74, 56, 0.2) !important;
+}

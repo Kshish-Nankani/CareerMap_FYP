@@ -1,3 +1,5 @@
+import { useEffect, useRef, useState } from 'react';
+
 export function Button({ children, variant = 'primary', className = '', ...props }) {
   const base = 'btn ' + (variant === 'ghost' ? 'btn-ghost' : 'btn-primary')
   return (
@@ -5,18 +7,26 @@ export function Button({ children, variant = 'primary', className = '', ...props
   )
 }
 
-export function SectionTitle({ overline, title }) {
+export function SectionTitle({ title, subtitle, icon }) {
   return (
     <div className="section-title">
-      {overline && <div className="overline">{overline}</div>}
-      <h2>{title}</h2>
+      <div className="title-wrap">
+        {icon && <i className={icon}></i>}
+        <h2>{title}</h2>
+      </div>
+      {subtitle && <p className="subtitle">{subtitle}</p>}
     </div>
   )
 }
 
-export function FeatureCard({ icon, title, desc, hover = false }) {
+export function FeatureCard({ icon, title, desc, hover = false, image }) {
   return (
     <div className={`card feature-card ${hover ? 'hoverable' : ''}`}>
+      {image && (
+        <div className="feature-image">
+          <img src={image} alt={title} />
+        </div>
+      )}
       {icon && <div className="icon" aria-hidden>{icon}</div>}
       <div className="card-title">{title}</div>
       <p className="muted">{desc}</p>
@@ -24,46 +34,50 @@ export function FeatureCard({ icon, title, desc, hover = false }) {
   )
 }
 
-export function TestimonialCard({ quote, author, role }) {
+export function ProcessStep({ step, title, desc }) {
+  const [isVisible, setIsVisible] = useState(false);
+  const stepRef = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.unobserve(entry.target);
+        }
+      },
+      {
+        threshold: 0.3
+      }
+    );
+
+    if (stepRef.current) {
+      observer.observe(stepRef.current);
+    }
+
+    return () => {
+      if (stepRef.current) {
+        observer.unobserve(stepRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <div className="card testimonial-card hoverable">
-      <p className="quote">"{quote}"</p>
-      <div className="author">
-        <div className="author-name">— {author}</div>
-        {role && <div className="author-role">{role}</div>}
+    <div 
+      ref={stepRef}
+      className={`process-step ${isVisible ? 'animate' : ''}`}
+    >
+      <div className="step-number">
+        {step}
       </div>
-    </div>
-  )
-}
-
-export function StatsCard({ number, label, color = 'blue' }) {
-  return (
-    <div className={`stats-card stats-card-${color}`}>
-      <div className="stats-number">{number}</div>
-      <div className="stats-label">{label}</div>
-    </div>
-  )
-}
-
-export function ProcessStep({ step, title, desc, icon }) {
-  return (
-    <div className="process-step">
-      <div className="step-number">{step}</div>
-      {icon && <div className="step-icon" aria-hidden>{icon}</div>}
       <div className="step-content">
         <h3>{title}</h3>
         <p>{desc}</p>
       </div>
     </div>
-  )
+  );
 }
 
-export function PartnerLogo({ name }) {
-  return (
-    <div className="partner-logo">
-      <div className="partner-name">{name}</div>
-    </div>
-  )
-}
+
 
 

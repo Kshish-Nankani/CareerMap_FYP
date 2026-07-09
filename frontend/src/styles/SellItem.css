@@ -1,0 +1,400 @@
+/* Sell Item Page Styles */
+
+.sell-item-page {
+  min-height: 100vh;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+}
+
+.sell-item-main {
+  flex: 1;
+  padding: 3rem 2rem;
+}
+
+.sell-item-wrapper {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Form Card - Same as tutor form */
+.tutor-application-form-card {
+  border: 1px solid #e6d6c4;
+  border-radius: 14px;
+  padding: 1.25rem;
+  background: linear-gradient(135deg, #fffcf9 0%, #faf6ef 100%);
+}
+
+/* Form Header */
+.tutor-app-form-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.tutor-app-form-header h3 {
+  margin: 0;
+  color: var(--text);
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.tutor-app-form-header h3 i {
+  color: var(--brand);
+  font-size: 1.3rem;
+}
+
+/* Form Grid */
+.tutor-app-form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Form Items */
+.info-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.info-label {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.form-input {
+  padding: 0.75rem 1rem;
+  border: 1px solid #d4c4b8;
+  border-radius: 8px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--text);
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(167, 139, 113, 0.1);
+  background: #fafaf8;
+}
+
+.form-input:disabled {
+  background: #f5f1eb;
+  cursor: not-allowed;
+  color: var(--text-light);
+}
+
+.tutor-bio-input {
+  resize: vertical;
+  min-height: 100px;
+  line-height: 1.5;
+}
+
+/* Full width items */
+.info-item.full-width {
+  grid-column: span 2;
+}
+
+/* Price Input */
+.price-input-wrapper {
+  display: flex;
+  align-items: center;
+  border: 1px solid #d4c4b8;
+  border-radius: 8px;
+  background: white;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.price-input-wrapper:focus-within {
+  border-color: var(--brand);
+  box-shadow: 0 0 0 3px rgba(167, 139, 113, 0.1);
+}
+
+.price-input-wrapper .form-input {
+  border: none;
+  flex: 1;
+  padding: 0.75rem 1rem;
+  box-shadow: none;
+}
+
+.price-input-wrapper .form-input:focus {
+  box-shadow: none;
+}
+
+.price-prefix {
+  padding: 0 1rem;
+  color: var(--text-light);
+  font-weight: 600;
+  background: #f5f1eb;
+  border-right: 1px solid #d4c4b8;
+  user-select: none;
+}
+
+/* Image Upload */
+.image-upload-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.file-input {
+  display: none;
+}
+
+.image-upload-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 2.5rem;
+  border: 2px dashed #d4c4b8;
+  border-radius: 12px;
+  background: #fafaf8;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.image-upload-label:hover {
+  border-color: var(--brand);
+  background: #f5f1eb;
+}
+
+.image-upload-label i {
+  color: var(--brand);
+  font-size: 2rem;
+  opacity: 0.7;
+}
+
+.image-upload-label span {
+  display: block;
+}
+
+.image-upload-label span:first-of-type {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.upload-hint {
+  font-size: 0.85rem;
+  color: var(--text-light);
+}
+
+/* Image Preview */
+.image-previews-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.image-preview-container {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #d4c4b8;
+  aspect-ratio: 1;
+  max-height: 300px;
+}
+
+.image-preview-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.primary-badge {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  background: var(--brand);
+  color: white;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.remove-image-btn {
+  position: absolute;
+  bottom: 0.75rem;
+  right: 0.75rem;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.remove-image-btn:hover {
+  background: rgba(0, 0, 0, 0.9);
+}
+
+/* Card Actions */
+.card-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--bg);
+  justify-content: flex-end;
+}
+
+.btn-save {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background: var(--brand);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 2px 8px rgba(167, 139, 113, 0.3);
+}
+
+.btn-save:hover:not(:disabled) {
+  background: #8B7355;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(167, 139, 113, 0.4);
+}
+
+.btn-save:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-cancel {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background: transparent;
+  color: var(--text-light);
+  border: 2px solid var(--border);
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Inter', sans-serif;
+}
+
+.btn-cancel:hover:not(:disabled) {
+  background: var(--bg);
+  border-color: var(--text-light);
+  color: var(--text);
+}
+
+.btn-cancel:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-secondary {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-decoration: underline;
+  padding: 0;
+  transition: color 0.3s ease;
+}
+
+.btn-secondary:hover {
+  color: var(--text);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sell-item-main {
+    padding: 1.5rem;
+  }
+
+  .tutor-application-form-card {
+    padding: 1rem;
+  }
+
+  .tutor-app-form-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+
+  .info-item.full-width {
+    grid-column: span 1;
+  }
+
+  .tutor-app-form-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .tutor-app-form-header h3 {
+    font-size: 1.1rem;
+  }
+
+  .card-actions {
+    flex-direction: column;
+  }
+
+  .btn-save,
+  .btn-cancel {
+    width: 100%;
+  }
+
+  .image-upload-label {
+    padding: 2rem 1rem;
+  }
+
+  .image-preview-container {
+    max-height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tutor-app-form-header h3 {
+    font-size: 1rem;
+  }
+
+  .info-label {
+    font-size: 0.85rem;
+  }
+
+  .form-input {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.75rem;
+  }
+
+  .btn-save,
+  .btn-cancel {
+    padding: 0.75rem 1.25rem;
+    font-size: 0.9rem;
+  }
+}
