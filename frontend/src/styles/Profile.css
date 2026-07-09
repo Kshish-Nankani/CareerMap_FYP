@@ -1898,32 +1898,40 @@
   }
 
   .overview-stats {
-    grid-template-columns: 1fr !important;
-    gap: 0.75rem !important;
-    margin-bottom: 1.25rem !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 0.5rem !important;
+    margin-bottom: 1rem !important;
   }
 
   .stat-card {
-    padding: 0.75rem 1rem !important;
-    border-radius: 12px !important;
-    gap: 0.75rem !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 0.6rem 0.4rem !important;
+    border-radius: 10px !important;
+    gap: 0.35rem !important;
   }
 
   .stat-icon {
-    width: 42px !important;
-    height: 42px !important;
-    border-radius: 8px !important;
-    font-size: 1.1rem !important;
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 6px !important;
+    font-size: 0.95rem !important;
+    margin: 0 auto !important;
   }
 
   .stat-value {
-    font-size: 1.25rem !important;
+    font-size: 1.1rem !important;
     margin: 0 !important;
+    font-weight: 700 !important;
   }
 
   .stat-label {
-    font-size: 0.75rem !important;
-    margin-top: 0.15rem !important;
+    font-size: 0.6rem !important;
+    line-height: 1.1 !important;
+    margin-top: 0 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.2px !important;
   }
 
   .summary-card {
